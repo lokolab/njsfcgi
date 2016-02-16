@@ -1,0 +1,21 @@
+{
+    "name": "lokolab-jsfcgi",
+    "version": "0.0.1",
+    "description": "Server for applications in Node.js + Apache + mod_fcgid + mod_suexec and wrapper script.",
+    "keywords": [ "fcgi", "fastcgi", "server", "nodejs", "mod_fcgid", "wrapper", "apache" ],
+    "homepage": "www.lokolab.net",
+    "author": {
+        "name": "Krystian Pietruszka",
+        "email": "kpietru@lokolab.net"
+    },
+    "license": "MIT",
+    "main": "index.js",
+    "engines": { "node": ">= 4.0.0" },
+    "dependencies": {
+        "node-fastcgi": ">= 0.1.10"
+    },
+    "repository" : {
+        "type" : "git",
+        "url" : "https://github.com/lokolab/jsfcgi/archive/v0.0.1.zip"
+    }
+}
