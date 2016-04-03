@@ -8,8 +8,6 @@ lokolab/njsfcgi
 - Download: http://www.github.com/lokolab/njsfcgi/archive/v0.0.1.tar.gz
 - License MIT
 
-Server for applications in Node.js + Apache + mod_fcgid + mod_suexec and wrapper script.
-
 [![NPM](https://nodei.co/npm/lokolab-njsfcgi.png?downloads=true)](https://nodei.co/npm/lokolab-njsfcgi/)
 
 Example
@@ -17,7 +15,7 @@ Example
 
 Application:
 ```javascript
-jsfcgi.createServer(function(request, response) {
+njsfcgi.createServer(function(request, response) {
     response.writeHead(200, { 'content-type': 'text/html; charset=utf-8' });
     response.end('Hello World!');
 }).listen();
@@ -26,9 +24,9 @@ jsfcgi.createServer(function(request, response) {
 FcgidWrapper*:
 ```javascript
 #!/path/to/node/bin/node
-var _jsfcgi = require('lokolab-jsfcgi');
+var _njsfcgi = require('lokolab-njsfcgi');
 
-_jsfcgi.initServer('utf8');
+_njsfcgi.initServer('utf8');
 ```
 
 Apache*:
