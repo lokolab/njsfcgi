@@ -1,7 +1,7 @@
 {
-    "name": "lokolab-jsfcgi",
+    "name": "lokolab-njsfcgi",
     "version": "0.0.1",
-    "description": "Server for applications in Node.js + Apache + mod_fcgid + mod_suexec and wrapper script.",
+    "description": "Wrapper for applications in Node.js via \"mod_fcgid\"",
     "keywords": [ "fcgi", "fastcgi", "server", "nodejs", "mod_fcgid", "wrapper", "apache" ],
     "homepage": "www.lokolab.net",
     "author": {
@@ -9,13 +9,13 @@
         "email": "kpietru@lokolab.net"
     },
     "license": "MIT",
-    "main": "index.js",
+    "main": "index.njs",
     "engines": { "node": ">= 4.0.0" },
     "dependencies": {
         "node-fastcgi": ">= 0.1.10"
     },
     "repository" : {
         "type" : "git",
-        "url" : "https://github.com/lokolab/jsfcgi/archive/v0.0.1.zip"
+        "url" : "https://github.com/lokolab/njsfcgi/archive/v0.0.1.zip"
     }
 }
