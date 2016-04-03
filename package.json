@@ -2,7 +2,7 @@
     "name": "lokolab-njsfcgi",
     "version": "0.0.1",
     "description": "Wrapper for applications in Node.js via \"mod_fcgid\"",
-    "keywords": [ "fcgi", "fastcgi", "server", "nodejs", "mod_fcgid", "wrapper", "apache" ],
+    "keywords": [ "fcgi", "fastcgi", "server", "nodejs", "node", "mod_fcgid", "wrapper", "apache" ],
     "homepage": "www.lokolab.net",
     "author": {
         "name": "Krystian Pietruszka",
