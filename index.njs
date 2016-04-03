@@ -1,5 +1,5 @@
 /**
- * lokolab/njsfcgi – Wrapper for applications in Node.js via "mod_fcgid".
+ * lokolab/njsfcgi - Wrapper for applications in Node.js via "mod_fcgid".
  * 
  * @see README.md
  * 
