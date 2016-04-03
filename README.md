@@ -34,7 +34,7 @@ Apache*:
 <IfModule fcgid_module>
     Options +ExecCgi
     AddHandler fcgid-script .njs
-    FcgidWrapper /path/to/wrapper/nodejs5.fcgi .njs
+    FcgidWrapper /path/to/wrapper/node5.fcgi .njs
     <IfModule suexec_module>
         SuexecUserGroup someuser someuser
     </IfModule>
@@ -43,9 +43,9 @@ Apache*:
 
 Execute commands via shell*:
 ```shell
-chmod 744 /path/to/wrapper/nodejs5.fcgi
+chmod 744 /path/to/wrapper/node5.fcgi
 
-chown someuser:someuser /path/to/wrapper/nodejs5.fcgi
+chown someuser:someuser /path/to/wrapper/node5.fcgi
 ```
 
 \* Paths and username should be modified to the server.
