@@ -1,13 +1,16 @@
-lokolab/jsfcgi
-==============
+lokolab/njsfcgi
+===============
+*Wrapper for applications in Node.js via "mod_fcgid"*
 
-[ Node.js ] [ License MIT ]
+- Version: 0.0.1
+- Technologies: JavaScript, Node.js
+- Compatibility: Node.js, modules "http" and "node-fastcgi"
+- Download: http://www.github.com/lokolab/njsfcgi/archive/v0.0.1.tar.gz
+- License MIT
 
 Server for applications in Node.js + Apache + mod_fcgid + mod_suexec and wrapper script.
 
-Compatibile with modules "http" and "node-fastcgi".
-
-[![NPM](https://nodei.co/npm/lokolab-jsfcgi.png?downloads=true)](https://nodei.co/npm/lokolab-jsfcgi/)
+[![NPM](https://nodei.co/npm/lokolab-njsfcgi.png?downloads=true)](https://nodei.co/npm/lokolab-njsfcgi/)
 
 Example
 -------
@@ -30,22 +33,21 @@ _jsfcgi.initServer('utf8');
 
 Apache*:
 ```apache
-<IfModule mod_fcgid.c>
+<IfModule fcgid_module>
     Options +ExecCgi
-    AddHandler fcgid-script .js
-    # Idea, wrapper path per user: /home/.fcgi/someuser/node/node5.fcgi
-    FcgidWrapper /path/to/wrapper/node5.fcgi .js
-    <IfModule mod_suexec.c>
-	   SuexecUserGroup someuser someuser
+    AddHandler fcgid-script .njs
+    FcgidWrapper /path/to/wrapper/nodejs5.fcgi .njs
+    <IfModule suexec_module>
+        SuexecUserGroup someuser someuser
     </IfModule>
 </IfModule>
 ```
 
 Execute commands via shell*:
 ```shell
-chmod 744 /path/to/wrapper/node5.fcgi
+chmod 744 /path/to/wrapper/nodejs5.fcgi
 
-chown someuser:someuser /path/to/wrapper/node5.fcgi
+chown someuser:someuser /path/to/wrapper/nodejs5.fcgi
 ```
 
 \* Paths and username should be modified to the server.
