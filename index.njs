@@ -34,6 +34,7 @@ Njsfcgi.prototype.initServer = function(encoding) {
         fs.readFile(request.cgiParams['SCRIPT_FILENAME'], encoding, function(error, data) {
             if (error) throw error;
             var njsfcgi = self;
+            if (data.match(/^#!.+/)) var data = "//" + data;
             eval(data);
             if (!njsfcgi)                     throw 'Variable njsfcgi undefined.';
             if (typeof(njsfcgi) !== 'object') throw 'Variable njsfcgi must be an object.';
