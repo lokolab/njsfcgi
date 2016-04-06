@@ -12,7 +12,7 @@
     "main": "index.njs",
     "engines": { "node": ">= 4.0.0" },
     "dependencies": {
-        "node-fastcgi": ">= 0.1.10"
+        "node-fastcgi": "0.1.10"
     },
     "repository" : {
         "type" : "git",
