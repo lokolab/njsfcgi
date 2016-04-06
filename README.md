@@ -23,9 +23,8 @@ njsfcgi.createServer(function(request, response) {
 
 FcgidWrapper*:
 ```javascript
-#!/path/to/node/bin/node
+#!/usr/local/ruby/5.10.0/bin/node
 var _njsfcgi = require('lokolab-njsfcgi');
-
 _njsfcgi.initServer('utf8');
 ```
 
