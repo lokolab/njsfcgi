@@ -6,6 +6,7 @@ lokolab/njsfcgi
 - Technologies: JavaScript, Node.js
 - Compatibility: Apache HTTP Server (2.4), "mod_fcgid (2.3)", Node.js (4, 5), modules "http" and "node-fastcgi (0.1.10)"
 - Download: http://www.github.com/lokolab/njsfcgi/archive/v0.0.1.tar.gz
+- Copyright: Krystian Pietruszka (email kpietru@lokolab.net)
 - License MIT
 
 [![NPM](https://nodei.co/npm/lokolab-njsfcgi.png?downloads=true)](https://nodei.co/npm/lokolab-njsfcgi/)
