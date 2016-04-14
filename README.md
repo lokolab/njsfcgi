@@ -10,7 +10,7 @@ lokolab/njsfcgi
 - Download:
       http://www.github.com/lokolab/njsfcgi/archive/v0.0.1.tar.gz
 - Copyright:
-      Krystian Pietruszka (email kpietru@lokolab.net)
+      Krystian Pietruszka <kpietru@lokolab.net>
 - License MIT
 
 Wrapper for applications in Node.js via "mod_fcgid".
@@ -22,7 +22,7 @@ Example application:
 
     #!/usr/bin/node
     njsfcgi.createServer(function(request, response) {
-        response.writeHead(200, { 'content-type': 'text/html; charset=utf-8' });
+        response.writeHead(200, { 'content-type': 'text/html' });
         response.end('Hello World!');
     }).listen();
 
