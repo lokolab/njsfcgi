@@ -1,5 +1,5 @@
-lokolab/njsfcgi
-===============
+njsfcgi
+=======
 
 - Version:
       0.0.1
