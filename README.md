@@ -6,7 +6,7 @@ lokolab/njsfcgi
 - Technologies:
       JavaScript, Node.js
 - Compatibility:
-      Apache HTTP Server (>= 2.4), "mod_fcgid (>= 2.3)", Node.js (>= 4), modules "http" and "node-fastcgi (0.1.10)"
+      Apache HTTP Server (>= 2.4), "mod_fcgid (>= 2.3)", Node.js (>= 4), modules "http" and "node-fastcgi"
 - Download:
       http://www.github.com/lokolab/njsfcgi/archive/v0.0.1.tar.gz
 - Copyright:
