@@ -28,13 +28,14 @@ NjsFcgi.prototype.listen = function() {
     return this.server;
 };
 
-NjsFcgi.prototype.initServer = function(encoding) {
+NjsFcgi.prototype.run = function(encoding) {
+    var encoding = encoding || 'utf8';
     var self = this;
     this.server = this.fastcgi.createServer(function(request, response) {
         fs.readFile(request.cgiParams['SCRIPT_FILENAME'], encoding, function(error, data) {
             if (error) throw error;
             var njsfcgi = self;
-            if (data.match(/^#!.+/))          var data = "//" + data;
+            if (data.match(/^#!.+/))          var data = '//' + data;
             eval(data);
             if (!njsfcgi)                     throw 'Variable njsfcgi undefined.';
             if (typeof(njsfcgi) !== 'object') throw 'Variable njsfcgi must be an object.';
