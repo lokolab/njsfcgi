@@ -11,24 +11,24 @@
 var fs = require('fs');
 var fastcgi = require('node-fastcgi');
 
-function Njsfcgi(fastcgi) {
+function NjsFcgi(fastcgi) {
     this.fastcgi = fastcgi;
 };
 
-Njsfcgi.prototype.callback = null;
-Njsfcgi.prototype.server = null;
-Njsfcgi.prototype.fastcgi = null;
+NjsFcgi.prototype.callback = null;
+NjsFcgi.prototype.server = null;
+NjsFcgi.prototype.fastcgi = null;
 
-Njsfcgi.prototype.createServer = function(callback) {
+NjsFcgi.prototype.createServer = function(callback) {
     this.callback = callback;
     return this.server;
 };
 
-Njsfcgi.prototype.listen = function() {
+NjsFcgi.prototype.listen = function() {
     return this.server;
 };
 
-Njsfcgi.prototype.initServer = function(encoding) {
+NjsFcgi.prototype.initServer = function(encoding) {
     var self = this;
     this.server = this.fastcgi.createServer(function(request, response) {
         fs.readFile(request.cgiParams['SCRIPT_FILENAME'], encoding, function(error, data) {
@@ -43,4 +43,4 @@ Njsfcgi.prototype.initServer = function(encoding) {
     }).listen();
 };
 
-module.exports = new Njsfcgi(fastcgi);
+module.exports = new NjsFcgi(fastcgi);
