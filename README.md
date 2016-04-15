@@ -29,8 +29,8 @@ Example application:
 FcgidWrapper*:
 
     #!/usr/local/node/5.10.0/bin/node
-    var _njsfcgi = require('lokolab-njsfcgi');
-    _njsfcgi.initServer('utf8');
+    var njsf = require('njsfcgi');
+    njsf.initServer('utf8');
 
 Apache*:
 
