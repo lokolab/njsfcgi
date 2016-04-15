@@ -1,5 +1,5 @@
 {
-    "name": "lokolab-njsfcgi",
+    "name": "njsfcgi",
     "version": "0.0.1",
     "description": "Wrapper for applications in Node.js via \"mod_fcgid\"",
     "keywords": [ "fcgi", "fastcgi", "server", "mod_fcgid", "wrapper", "apache" ],
@@ -9,7 +9,7 @@
         "email": "kpietru@lokolab.net"
     },
     "license": "MIT",
-    "main": "index.njs",
+    "main": "njsfcgi.njs",
     "engines": { "node": ">= 4.0.0" },
     "dependencies": {
         "node-fastcgi": "0.1.10"
