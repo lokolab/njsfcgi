@@ -30,7 +30,7 @@ FcgidWrapper*:
 
     #!/usr/local/node/5.10.0/bin/node
     var njsf = require('njsfcgi');
-    njsf.initServer('utf8');
+    njsf.run();
 
 Apache*:
 
