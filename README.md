@@ -8,7 +8,7 @@ njsfcgi
 - Compatibility:
       Apache HTTP Server (>= 2.4), "mod_fcgid (>= 2.3)", Node.js (>= 4)
 - Download:
-      http://www.github.com/lokolab/njsfcgi/archive/v0.0.1.tar.gz
+      https://github.com/lokolab/njsfcgi/archive/v0.0.1.tar.gz
 - Copyright:
       Krystian Pietruszka <kpietru@lokolab.net>
 - License MIT
@@ -20,7 +20,7 @@ Configuration and installation
 
 First, install the "njsfcgi" Node.js module:
 
-    npm install -g http://www.github.com/lokolab/njsfcgi/archive/v0.0.1.tar.gz
+    npm install -g https://github.com/lokolab/njsfcgi/archive/v0.0.1.tar.gz
 
 Second, create a file named "index.njs" inside your
 website’s document root and add the following lines:
