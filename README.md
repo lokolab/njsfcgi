@@ -49,9 +49,11 @@ Fourth, add the following lines to your Apache configuration*:
         </IfModule>
     </IfModule>
 
-Finally, execute commands via shell*:
+Fifth, execute commands via shell*:
 
     chmod 744 /path/to/wrapper/node4.fcgi
     chown someuser:someuser /path/to/wrapper/node4.fcgi
+
+Finally, restart the Apache HTTP Server.
 
 [*] Paths and username should be modified to the server.
