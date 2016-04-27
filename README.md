@@ -19,6 +19,7 @@ njsfcgi
 - Homepage: <http://www.lokolab.net>
 
 Wrapper for applications in Node.js via "mod_fcgid".
+____________________________________________________
 
 Configuration and installation
 ------------------------------
@@ -31,7 +32,8 @@ Second, create a file named "index.njs" inside your
 website’s document root and add the following lines:
 
     #!/usr/bin/node
-    njsfcgi.createServer(function(request, response) {
+    var http = njsfcgi;
+    http.createServer(function(request, response) {
         response.writeHead(200, { 'content-type': 'text/html' });
         response.end('Hello World!');
     }).listen();
@@ -40,8 +42,8 @@ Third, create a file named "node4.fcgi" outside
 your home directory and add the following lines*:
 
     #!/usr/local/node/4.4.3/bin/node
-    var njsf = require('njsfcgi');
-    njsf.run();
+    var n = require('njsfcgi');
+    n.run();
 
 Fourth, add the following lines to your Apache configuration*:
 
