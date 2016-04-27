@@ -71,3 +71,5 @@ Finally, restart the Apache HTTP Server.
 See
 ---
 - ["node-fastcgi" – Create FastCGI applications in node. Near drop-in replacement for node's http module.][1]
+
+[1]: http://www.npmjs.com/package/node-fastcgi
