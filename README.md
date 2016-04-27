@@ -13,7 +13,7 @@ njsfcgi
       - mod_fcgid (>= 2.3)
       - Node.js (>= 4)
 - Dependencies:
-      - node-fastcgi (>= 0.1.10, < 1)
+      - node-fastcgi (>= 1, < 2)
 - Copyright / Authors:
       - Krystian Pietruszka <kpietru@lokolab.net>
 - Licenses:
@@ -67,3 +67,7 @@ Fifth, execute commands via shell*:
 Finally, restart the Apache HTTP Server.
 
 [*] Paths and username should be modified to the server.
+
+See
+---
+- ["node-fastcgi" – Create FastCGI applications in node. Near drop-in replacement for node's http module.][1]
