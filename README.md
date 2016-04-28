@@ -6,18 +6,18 @@ njsfcgi
 -->
 - Version: 0.0.1-dev
 - Technologies:
-      - JavaScript
-      - Node.js
+  - JavaScript
+  - Node.js
 - Compatibility:
-      - Apache HTTP Server (>= 2.4)
-      - mod_fcgid (>= 2.3)
-      - Node.js (>= 4)
+  - Apache HTTP Server (>= 2.4)
+  - mod_fcgid (>= 2.3)
+  - Node.js (>= 4)
 - Dependencies:
-      - node-fastcgi (>= 1, < 2)
+  - node-fastcgi (>= 1, < 2)
 - Copyright / Authors:
-      - Krystian Pietruszka <kpietru@lokolab.net>
+  - Krystian Pietruszka <kpietru@lokolab.net>
 - Licenses:
-      - MIT
+  - MIT
 - Download: <https://github.com/lokolab/njsfcgi/archive/v0.0.1.tar.gz>
 - Homepage: <http://www.lokolab.net>
 
