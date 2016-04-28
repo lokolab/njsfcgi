@@ -70,6 +70,8 @@ Finally, restart the Apache HTTP Server.
 
 See
 ---
-- ["node-fastcgi" – Create FastCGI applications in node. Near drop-in replacement for node's http module.][1]
+- [FastCGI Specification][1]
+- ["node-fastcgi" – Create FastCGI applications in node. Near drop-in replacement for node's http module.][2]
 
-[1]: http://www.npmjs.com/package/node-fastcgi
+[1]: http://web.archive.org/web/20160306081510/http://fastcgi.com/drupal/node/6?q=node/22
+[2]: http://www.npmjs.com/package/node-fastcgi
