@@ -29,7 +29,7 @@ Configuration and installation
 
 First, install the "njsfcgi" Node.js module:
 
-    npm install -g https://github.com/lokolab/njsfcgi/archive/v0.0.1.tar.gz
+    npm install -g https://github.com/lokolab/njsfcgi/archive/master.tar.gz
 
 Second, create a file named "index.njs" inside your
 website’s document root and add the following lines:
