@@ -1,10 +1,10 @@
 njsfcgi
 =======
-
+<!--
 **This is development (master) version.<br> For production version (relase) see
 <https://github.com/lokolab/njsfcgi/tree/v1.0.0>**
-
-- Version: 1.0.0-dev
+-->
+- Version: 0.0.1-dev
 - Technologies:
       - JavaScript
       - Node.js
