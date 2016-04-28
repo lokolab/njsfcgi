@@ -18,7 +18,7 @@ njsfcgi
   - Krystian Pietruszka <kpietru@lokolab.net>
 - Licenses:
   - MIT
-- Download: <https://github.com/lokolab/njsfcgi/archive/v0.0.1.tar.gz>
+- Download: <https://github.com/lokolab/rbfcgi/releases>
 - Homepage: <http://www.lokolab.net>
 
 Wrapper for applications in Node.js via "mod_fcgid".
@@ -34,7 +34,6 @@ First, install the "njsfcgi" Node.js module:
 Second, create a file named "index.njs" inside your
 website’s document root and add the following lines:
 
-    #!/usr/bin/node
     var http = njsfcgi;
     http.createServer(function(request, response) {
         response.writeHead(200, { 'content-type': 'text/html' });
@@ -66,8 +65,6 @@ Fifth, execute commands via shell*:
 
 Finally, restart the Apache HTTP Server.
 
-[*] Paths and username should be modified to the server.
-
 See
 ---
 - [FastCGI Specification][1]
@@ -75,3 +72,6 @@ See
 
 [1]: http://web.archive.org/web/20160306081510/http://fastcgi.com/drupal/node/6?q=node/22
 [2]: http://www.npmjs.com/package/node-fastcgi
+
+________________________________________________________
+[*] Paths and username should be modified to the server.
