@@ -24,8 +24,8 @@ njsfcgi
 Wrapper for applications in Node.js via "mod_fcgid".
 ____________________________________________________
 
-Configuration and installation
-------------------------------
+Installing and configuring
+--------------------------
 
 First, install the "njsfcgi" Node.js module:
 
