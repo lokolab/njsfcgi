@@ -65,8 +65,9 @@ Fifth, execute commands via shell*:
 
 Finally, restart the Apache HTTP Server.
 
-See
----
+References
+----------
+
 - [FastCGI Specification][1]
 - ["node-fastcgi" – Create FastCGI applications in node. Near drop-in replacement for node's http module.][2]
 
