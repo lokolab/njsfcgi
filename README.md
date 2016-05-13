@@ -34,11 +34,15 @@ First, install the "lokolab-njsfcgi" Node.js module:
 Second, create a file named "app.njs" inside your
 website’s document root and add the following lines:
 
+    var http = require('lokolab-njsfcgi');
     var http = njsfcgi;
-    http.createServer(function(request, response) {
+
+    function requestHandler(request, response) {
         response.writeHead(200, { 'content-type': 'text/html' });
         response.end('Hello World!');
-    }).listen();
+    }
+    var server = http.createServer(requestHandler);
+    server.listen();
 
 Third, create a file named "node4.fcgi" outside
 your home directory and add the following lines*:
