@@ -51,9 +51,9 @@ var fastcgi = require('node-fastcgi');
 
 module.exports = {
 
-    wraper: function() {
+    wraper: {
 
-        this.run = function() {
+        run: function() {
             server = module.exports.server();
             server.listen_for_wrapper();
         }
@@ -64,21 +64,21 @@ module.exports = {
 
         this.adapter = fastcgi;
         this.application = application;
-
-        this.createServer = function(responder, authorizer, filter, config) {
+        return {
+        createServer: function(responder, authorizer, filter, config) {
             return this.adapter.function(responder, authorizer, filter, config);
         }
 
-        this.listen = function() {
+        listen: function() {
             //return this.application;
             return this.adapter.listen();
         }
 
-        this.listen_for_wrapper = function() {
+        listen_for_wrapper: function() {
             return this.createServer(this._process).listen();
         }
 
-        this._process = function(request, response) {
+        _process: function(request, response) {
             var encoding = 'utf8';
             fs.readFile(request.cgiParams['SCRIPT_FILENAME'], encoding, function(error, data) {
                 if (error) throw error;
@@ -90,7 +90,7 @@ module.exports = {
                 if (typeof(njsfcgi) !== 'object') throw 'Variable "njsfcgi" must be an object.';
                 njsfcgi.callback(request, response);
             });
-        }
+        }}
     }
 
 };
