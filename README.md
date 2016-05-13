@@ -2,7 +2,7 @@ njsfcgi
 =======
 <!--
 **This is development (master) version.<br> For production version (relase) see
-<https://github.com/lokolab/njsfcgi/tree/v1.0.0>**
+<https://github.com/lokolab/njsfcgi/tree/v0.0.1>**
 -->
 - Version: 0.0.1-dev
 - Technologies:
@@ -17,8 +17,8 @@ njsfcgi
 - Copyright / Authors:
   - Krystian Pietruszka <kpietru@lokolab.net>
 - Licenses:
-  - MIT
-- Download: <https://github.com/lokolab/rbfcgi/releases>
+  - MIT <http://opensource.org/licenses/MIT>
+- Download: <https://github.com/lokolab/njsfcgi/releases>
 - Homepage: <http://www.lokolab.net>
 
 Wrapper for applications in Node.js via "mod_fcgid".
@@ -27,11 +27,11 @@ ____________________________________________________
 Installing and configuring
 --------------------------
 
-First, install the "njsfcgi" Node.js module:
+First, install the "lokolab-njsfcgi" Node.js module:
 
     npm install -g https://github.com/lokolab/njsfcgi/archive/master.tar.gz
 
-Second, create a file named "index.njs" inside your
+Second, create a file named "app.njs" inside your
 website’s document root and add the following lines:
 
     var http = njsfcgi;
@@ -44,8 +44,9 @@ Third, create a file named "node4.fcgi" outside
 your home directory and add the following lines*:
 
     #!/usr/local/node/4.4.3/bin/node
-    var n = require('njsfcgi');
-    n.run();
+
+    var w = require('lokolab-njsfcgi');
+    w.run();
 
 Fourth, add the following lines to your Apache configuration*:
 
@@ -63,7 +64,11 @@ Fifth, execute commands via shell*:
     chmod 744 /path/to/wrapper/node4.fcgi
     chown someuser:someuser /path/to/wrapper/node4.fcgi
 
-Finally, restart the Apache HTTP Server.
+Sixth, restart the Apache HTTP Server via shell:
+
+    service apache2 restart
+
+Finally, in the browser, enter `http://localhost/app.njs`
 
 References
 ----------
