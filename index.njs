@@ -54,8 +54,8 @@ module.exports = {
     wraper: function() {
 
         this.run = function() {
-            server = module.exports.server()
-            server.listen_for_wrapper()
+            server = module.exports.server();
+            server.listen_for_wrapper();
         }
 
     },
@@ -66,12 +66,12 @@ module.exports = {
         this.application = application;
 
         this.createServer = function(responder, authorizer, filter, config) {
-            return this.adapter.function(responder, authorizer, filter, config)
+            return this.adapter.function(responder, authorizer, filter, config);
         }
 
         this.listen = function() {
-            //return this.application
-            return this.adapter.listen()
+            //return this.application;
+            return this.adapter.listen();
         }
 
         this.listen_for_wrapper = function() {
