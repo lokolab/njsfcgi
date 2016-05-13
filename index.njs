@@ -8,24 +8,24 @@
 var fs = require('fs');
 var fastcgi = require('node-fastcgi');
 
-function Njsfcgi(fastcgi) {
+function NjsFcgi(fastcgi) {
     this.fastcgi = fastcgi;
 };
 
-Njsfcgi.prototype.callback = null;
-Njsfcgi.prototype.server = null;
-Njsfcgi.prototype.fastcgi = null;
+NjsFcgi.prototype.callback = null;
+NjsFcgi.prototype.server = null;
+NjsFcgi.prototype.fastcgi = null;
 
-Njsfcgi.prototype.createServer = function(callback) {
+NjsFcgi.prototype.createServer = function(callback) {
     this.callback = callback;
     return this.server;
 };
 
-Njsfcgi.prototype.listen = function() {
+NjsFcgi.prototype.listen = function() {
     return this.server;
 };
 
-Njsfcgi.prototype.run = function(encoding) {
+NjsFcgi.prototype.run = function(encoding) {
     var encoding = encoding || 'utf8';
     var self = this;
     this.server = this.fastcgi.createServer(function(request, response) {
@@ -33,16 +33,15 @@ Njsfcgi.prototype.run = function(encoding) {
             if (error) throw error;
             var njsfcgi = self;
             if (data.match(/^#!.+/))          var data = '//' + data;
-            //if (data.substring(0, 2) === '!#' var data = '//' + data;
             eval(data);
-            if (!njsfcgi)                     throw 'Variable "njsfcgi" undefined.';
-            if (typeof(njsfcgi) !== 'object') throw 'Variable "njsfcgi" must be an object.';
+            if (!njsfcgi)                     throw 'Variable njsfcgi undefined.';
+            if (typeof(njsfcgi) !== 'object') throw 'Variable njsfcgi must be an object.';
             njsfcgi.callback(request, response);
         });
     }).listen();
 };
 
-module.exports = new Njsfcgi(fastcgi);
+module.exports = new NjsFcgi(fastcgi);
 */
 
 
