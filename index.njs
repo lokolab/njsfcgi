@@ -1,10 +1,8 @@
 /**
  * Wrapper for applications in Node.js via "mod_fcgid".
- * 
- * @see README.md
- * 
- * @copyright Krystian Pietruszka <kpietru@lokolab.net>
- * @license MIT
+ *
+ * Copyright Krystian Pietruszka <kpietru@lokolab.net>
+ * License MIT
  */
 
 var fs = require('fs');
@@ -37,11 +35,12 @@ Njsfcgi.prototype.run = function(encoding) {
             if (data.match(/^#!.+/))          var data = '//' + data;
             //if (data.substring(0, 2) === '!#' var data = '//' + data;
             eval(data);
-            if (!njsfcgi)                     throw 'Variable njsfcgi undefined.';
-            if (typeof(njsfcgi) !== 'object') throw 'Variable njsfcgi must be an object.';
+            if (!njsfcgi)                     throw 'Variable "njsfcgi" undefined.';
+            if (typeof(njsfcgi) !== 'object') throw 'Variable "njsfcgi" must be an object.';
             njsfcgi.callback(request, response);
         });
     }).listen();
 };
 
 module.exports = new Njsfcgi(fastcgi);
+
