@@ -4,7 +4,7 @@
  * Copyright Krystian Pietruszka <kpietru@lokolab.net>
  * License MIT
  */
-/*
+
 var fs = require('fs');
 var fastcgi = require('node-fastcgi');
 
@@ -42,9 +42,9 @@ NjsFcgi.prototype.run = function(encoding) {
 };
 
 module.exports = new NjsFcgi(fastcgi);
-*/
 
 
+/*
 var fs = require('fs');
 var fastcgi = require('node-fastcgi');
 
@@ -93,7 +93,7 @@ module.exports = {
     }
 
 };
-
+*/
 
 
 
