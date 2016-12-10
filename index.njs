@@ -33,6 +33,15 @@ NjsFcgi.prototype.run = function(encoding) {
             if (error) throw error;
             var njsfcgi = self;
             if (data.match(/^#!.+/))          var data = '//' + data;
+            
+            // Overwrite global __filename
+            __filename = request.cgiParams['SCRIPT_FILENAME'];
+
+            // Overwrite global __dirname
+            var dirname = request.cgiParams['SCRIPT_FILENAME'].split('/');
+            dirname.pop();
+            __dirname = dirname.join('/');
+            
             eval(data);
             if (!njsfcgi)                     throw 'Variable njsfcgi undefined.';
             if (typeof(njsfcgi) !== 'object') throw 'Variable njsfcgi must be an object.';
