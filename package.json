@@ -1,5 +1,5 @@
 {
-    "name": "@lokolab/Njsfcgi",
+    "name": "@lokolab/njsfcgi",
     "version": "0.0.1-dev",
     "description": "Wrapper for applications in Node.js via \"mod_fcgid\"",
     "keywords": [ "fcgi", "fastcgi", "server", "mod_fcgid", "wrapper", "apache" ],
