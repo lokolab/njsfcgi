@@ -31,7 +31,7 @@ First, install the "@lokolab/njsfcgi" Node.js module:
 
     npm install -g https://github.com/lokolab/njsfcgi/archive/master.tar.gz
 
-Second, create a file named "app.njs" inside your
+Second, create a file named "index.mjs" inside your
 website’s document root and add the following lines:
 
     var http = require('@lokolab/njsfcgi');
@@ -39,7 +39,7 @@ website’s document root and add the following lines:
 
     function requestHandler(request, response) {
         response.writeHead(200, { 'content-type': 'text/html' });
-        response.end('Hello World!');
+        response.end('Hello');
     }
     var server = http.createServer(requestHandler);
     server.listen();
@@ -56,8 +56,8 @@ Fourth, add the following lines to your Apache configuration*:
 
     <IfModule fcgid_module>
         Options +ExecCgi
-        AddHandler fcgid-script .njs
-        FcgidWrapper /path/to/wrapper/node4.fcgi .njs
+        AddHandler fcgid-script .mjs
+        FcgidWrapper /path/to/wrapper/node4.fcgi .mjs
         <IfModule suexec_module>
             SuexecUserGroup someuser someuser
         </IfModule>
@@ -72,7 +72,7 @@ Sixth, restart the Apache HTTP Server via shell:
 
     service apache2 restart
 
-Finally, in the browser, enter `http://localhost/app.njs`
+Finally, in the browser, enter `http://localhost/index.mjs`
 
 References
 ----------
