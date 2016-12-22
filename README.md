@@ -13,7 +13,7 @@ njsfcgi
   - mod_fcgid (>= 2.3)
   - Node.js (>= 4)
 - Dependencies:
-  - node-fastcgi (^1)
+  - node-fastcgi (^ 1)
 - Copyright / Authors:
   - Krystian Pietruszka <kpietru@lokolab.net>
 - Licenses:
@@ -34,22 +34,19 @@ First, install the "@lokolab/njsfcgi" Node.js module:
 Second, create a file named "index.mjs" inside your
 website’s document root and add the following lines:
 
-    var http = require('@lokolab/njsfcgi');
-    var http = njsfcgi;
+    const server = require('@lokolab/njsfcgi');
 
-    function requestHandler(request, response) {
+    server.createServer(function(request, response) {
         response.writeHead(200, { 'content-type': 'text/html' });
         response.end('Hello');
-    }
-    var server = http.createServer(requestHandler);
-    server.listen();
+    }).listen();
 
 Third, create a file named "node4.fcgi" outside
 your home directory and add the following lines*:
 
     #!/usr/local/node/4.4.3/bin/node
 
-    var w = require('@lokolab/njsfcgi');
+    const w = require('@lokolab/njsfcgi');
     w.run();
 
 Fourth, add the following lines to your Apache configuration*:
