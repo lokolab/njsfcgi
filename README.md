@@ -34,9 +34,9 @@ First, install the "@lokolab/njsfcgi" Node module:
 Second, create a file named "index.mjs" inside your
 website’s document root and add the following lines:
 
-    const server = require('@lokolab/njsfcgi');
+    const fcgi = require('@lokolab/njsfcgi');
 
-    server.createServer(function(request, response) {
+    fcgi.createServer(function(request, response) {
         response.writeHead(200, { 'content-type': 'text/html' });
         response.end('Hello');
     }).listen();
