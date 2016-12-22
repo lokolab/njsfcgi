@@ -13,7 +13,7 @@ njsfcgi
   - mod_fcgid (>= 2.3)
   - Node.js (>= 4)
 - Dependencies:
-  - node-fastcgi (>= 1, < 2)
+  - node-fastcgi (^1)
 - Copyright / Authors:
   - Krystian Pietruszka <kpietru@lokolab.net>
 - Licenses:
