@@ -9,11 +9,11 @@ njsfcgi
   - JavaScript
   - Node.js
 - Compatibility:
-  - Apache HTTP Server (>= 2.4)
-  - mod_fcgid (>= 2.3)
-  - Node.js (>= 4)
+  - Apache HTTP Server (>=2.4)
+  - mod_fcgid (>=2.3)
+  - Node.js (>=4)
 - Dependencies:
-  - node-fastcgi (^ 1)
+  - node-fastcgi (^1)
 - Copyright / Authors:
   - Krystian Pietruszka <kpietru@lokolab.net>
 - Licenses:
