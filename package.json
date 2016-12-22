@@ -9,9 +9,9 @@
         "email": "kpietru@lokolab.net"
     },
     "license": "MIT",
-    "main": "index.njs",
+    "main": "src/LokoLab/Njsfcgi/Njsfcgi.mjs",
     "engines": { "node": ">= 4.0.0" },
     "dependencies": {
-        "node-fastcgi": ">=1 <2"
+        "node-fastcgi": "^1"
     }
 }
