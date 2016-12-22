@@ -11,7 +11,7 @@ njsfcgi
 - Compatibility:
   - Apache HTTP Server (>=2.4)
   - mod_fcgid (>=2.3)
-  - Node (>=4)
+  - Node (>=7.2.1)
 - Dependencies:
   - @see package.json
 - Copyright / Authors:
@@ -41,10 +41,10 @@ website’s document root and add the following lines:
         response.end('Hello');
     }).listen();
 
-Third, create a file named "node4.fcgi" outside
+Third, create a file named "node7.fcgi" outside
 your home directory and add the following lines*:
 
-    #!/usr/local/node/4.4.3/bin/node
+    #!/usr/local/node/7.2.1/bin/node
 
     const w = require('@lokolab/njsfcgi');
     w.run();
