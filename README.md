@@ -27,14 +27,14 @@ ____________________________________________________
 Installing and configuring
 --------------------------
 
-First, install the "lokolab-njsfcgi" Node.js module:
+First, install the "@lokolab/njsfcgi" Node.js module:
 
     npm install -g https://github.com/lokolab/njsfcgi/archive/master.tar.gz
 
 Second, create a file named "app.njs" inside your
 website’s document root and add the following lines:
 
-    var http = require('lokolab-njsfcgi');
+    var http = require('@lokolab/njsfcgi');
     var http = njsfcgi;
 
     function requestHandler(request, response) {
@@ -49,7 +49,7 @@ your home directory and add the following lines*:
 
     #!/usr/local/node/4.4.3/bin/node
 
-    var w = require('lokolab-njsfcgi');
+    var w = require('@lokolab/njsfcgi');
     w.run();
 
 Fourth, add the following lines to your Apache configuration*:
