@@ -54,7 +54,7 @@ Fourth, add the following lines to your Apache configuration*:
     <IfModule fcgid_module>
         Options +ExecCgi
         AddHandler fcgid-script .mjs
-        FcgidWrapper /path/to/wrapper/node4.fcgi .mjs
+        FcgidWrapper /path/to/wrapper/node7.fcgi .mjs
         <IfModule suexec_module>
             SuexecUserGroup someuser someuser
         </IfModule>
@@ -62,8 +62,8 @@ Fourth, add the following lines to your Apache configuration*:
 
 Fifth, execute commands via shell*:
 
-    chmod 744 /path/to/wrapper/node4.fcgi
-    chown someuser:someuser /path/to/wrapper/node4.fcgi
+    chmod 744 /path/to/wrapper/node7.fcgi
+    chown someuser:someuser /path/to/wrapper/node7.fcgi
 
 Sixth, restart the Apache HTTP Server via shell:
 
