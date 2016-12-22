@@ -7,11 +7,11 @@ njsfcgi
 - Version: 0.0.1-dev
 - Technologies:
   - JavaScript
-  - Node.js
+  - Node
 - Compatibility:
   - Apache HTTP Server (>=2.4)
   - mod_fcgid (>=2.3)
-  - Node.js (>=4)
+  - Node (>=4)
 - Dependencies:
   - node-fastcgi (^1)
 - Copyright / Authors:
@@ -21,13 +21,13 @@ njsfcgi
 - Download: <https://github.com/lokolab/njsfcgi/releases>
 - Homepage: <http://www.lokolab.net>
 
-Wrapper for applications in Node.js via "mod_fcgid".
+Wrapper for applications in Node via "mod_fcgid".
 ____________________________________________________
 
 Installing and configuring
 --------------------------
 
-First, install the "@lokolab/njsfcgi" Node.js module:
+First, install the "@lokolab/njsfcgi" Node module:
 
     npm install -g https://github.com/lokolab/njsfcgi/archive/master.tar.gz
 
