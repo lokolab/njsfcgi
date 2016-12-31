@@ -25,7 +25,7 @@ NjsFcgi.prototype.listen = function() {
     return this.server;
 };
 
-NjsFcgi.prototype.run = function(encoding) {
+NjsFcgi.prototype.runnnnnnnnnnnnnnnnnn = function(encoding) {
     var encoding = encoding || 'utf8';
     var self = this;
     this.server = this.fastcgi.createServer(function(request, response) {
@@ -49,6 +49,16 @@ NjsFcgi.prototype.run = function(encoding) {
         });
     }).listen();
 };
+
+// front controller as module
+NjsFcgi.prototype.run = function(encoding) {
+    var self = this;
+    this.server = this.fastcgi.createServer(function(request, response) {
+            require(request.cgiParams['SCRIPT_FILENAME'])(self)
+            self.callback(request, response);
+    }).listen();
+};
+
 
 module.exports = new NjsFcgi(fastcgi);
 
